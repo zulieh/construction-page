@@ -8,6 +8,7 @@ import { GrProjects } from "react-icons/gr";
 import { IoConstructSharp } from "react-icons/io5";
 import { SiConstruct3 } from "react-icons/si";
 import { LuConstruction } from "react-icons/lu";
+import { CircleButton } from './Buttons/CircleButton';
 
 
 
@@ -69,6 +70,12 @@ const Landing = () => {
                     />
                 </div>
             </div>
+        </div>
+        <div className="underline-offset-4">
+           <h1 className='text-center text-4xl mt-32'>HOW ABOUT PROCESS</h1>
+           {/* <CircleButton
+           children="jjjjjjjj" /> */}
+
         </div>
     </div>
   );
