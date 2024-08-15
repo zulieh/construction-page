@@ -8,7 +8,8 @@ import { GrProjects } from "react-icons/gr";
 import { IoConstructSharp } from "react-icons/io5";
 import { SiConstruct3 } from "react-icons/si";
 import { LuConstruction } from "react-icons/lu";
-import { CircleButton } from './Buttons/CircleButton';
+// import { CircleButton } from './Buttons/CircleButton';
+import Footer from './Footer';
 
 
 
@@ -66,7 +67,7 @@ const Landing = () => {
                         children= {<LuConstruction />}
                         title="Projects Partnering"
                         text="We co-operate with many reputable contractors, undertake many large and small projects, 
-                        covering all aspects of electricity, irrigation, bridges…etc."
+                        covering all aspects of electricity, irrigation, bridges etc."
                     />
                 </div>
             </div>
@@ -77,6 +78,7 @@ const Landing = () => {
            children="jjjjjjjj" /> */}
 
         </div>
+        <Footer />
     </div>
   );
 }
