@@ -1,11 +1,12 @@
 import { Carousel, Typography, Button } from "@material-tailwind/react";
+import PrimaryButton from "./Buttons/PrimaryButton";
  
 export function CarouselWithContent() {
   return (
-    <Carousel className="rounded-xl translate-x-6 ease-in duration-300">
+    <Carousel className=" translate-x-6 ease-in duration-300">
       <div className="relative h-full w-full">
-        <img
-          src="/images/tall_dark.jpg"
+        <video
+          src="/images/glass.mp4"
           alt="image 1"
           className=" w-full object-cover"
         />
@@ -27,12 +28,8 @@ export function CarouselWithContent() {
               upon men&apos;s hearts, as for that subtle something.
             </Typography>
             <div className="flex justify-center gap-2">
-              <Button size="lg" color="white">
-                Explore
-              </Button>
-              {/* <Button size="lg" color="white" variant="text">
-                Gallery
-              </Button> */}
+            <PrimaryButton 
+            children="Explore" />
             </div>
           </div>
         </div>
@@ -61,12 +58,8 @@ export function CarouselWithContent() {
               upon men&apos;s hearts. 
             </Typography>
             <div className="flex gap-2">
-              <Button size="lg" color="white">
-                Explore
-              </Button>
-              {/* <Button size="lg" color="white" variant="text">
-                Gallery
-              </Button> */}
+            <PrimaryButton 
+            children="Explore" />
             </div>
           </div>
         </div>
@@ -95,9 +88,8 @@ export function CarouselWithContent() {
               upon men&apos;s hearts, as for that subtle something, that quality
             </Typography>
             <div className="flex gap-2">
-              <Button size="lg" color="orange">
-                Explore
-              </Button>
+            <PrimaryButton 
+            children="Explore" />
             </div>
           </div>
         </div>

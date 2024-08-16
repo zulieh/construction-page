@@ -10,14 +10,17 @@ import { SiConstruct3 } from "react-icons/si";
 import { LuConstruction } from "react-icons/lu";
 // import { CircleButton } from './Buttons/CircleButton';
 import Footer from './Footer';
+import PrimaryButton from './Buttons/PrimaryButton';
 
 
 
 const Landing = () => {
   return (
-    <div>
+    <div className='Container'>
+        <div className='h-lvh'>
         <CarouselWithContent />
-        <div className='px-28 '>
+        </div>
+        <div className='px-28 pt-10 '>
             <h1 className='text-5xl mb-10'>OUR SERVICES</h1>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                 <div>
@@ -72,13 +75,19 @@ const Landing = () => {
                 </div>
             </div>
         </div>
-        <div className="underline-offset-4">
-           <h1 className='text-center text-4xl mt-32'>HOW ABOUT PROCESS</h1>
-           {/* <CircleButton
-           children="jjjjjjjj" /> */}
-
+        <div className=" p-36 text-center">
+           <h2 className='text-center text-5xl mt-32'>YOU HAVE <span className='text-orange-600'>DREAMS</span>?</h2>
+           <h4 className='text-2xl my-10 text-gray-700'>We will</h4>
+           <h1 className='text-6xl font-bold mt-5'>MAKE IT COME <span className='text-orange-600'>TRUE</span>!</h1>
+           <PrimaryButton  
+           children="GET A CALL" 
+           className='hover:bg-black'
+           />
         </div>
+        <div className='footer'>
         <Footer />
+        </div>
+       
     </div>
   );
 }

@@ -1,5 +1,7 @@
 import React from "react";
 import { IoLogoChrome } from "react-icons/io";
+import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
+
 
 const Footer = () => {
     return (
@@ -35,6 +37,9 @@ const Footer = () => {
             </div>
         </div >
         <div className="pt-20 px-20">
+            <div className="bg-gray-900 w-10 h-10 ">
+            <MdOutlineKeyboardDoubleArrowUp size={35} />
+            </div>
             <p className="text-center pt-10 border-t border-gray-500">&copy; 2024 Karion by zu</p>
        </div>
         </div>
