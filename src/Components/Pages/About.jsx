@@ -1,12 +1,14 @@
 import React from 'react';
 import { MdOutlineMinimize } from "react-icons/md";
+import HeroBanner from '../HeroBanner';
 
 function About() {
   return (
    <>
-    <div className=" bg-[url('/images/con1.jpg')] p-48 pt-20 text-white">
-      <h1 className="text-6xl mt-36">About Lev-kal</h1>
-    </div>
+    <HeroBanner 
+      backgroundImage="/images/con1.jpg"
+      text="About Lev-kal"
+    />
    <div className='mt-16 p-40'>
     <div className='grid grid-cols-2 gap-16'>
       <div className=''>
