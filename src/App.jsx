@@ -6,6 +6,7 @@ import About from './Components/Pages/About'
 import Contact from './Components/Pages/Contact'
 import Navbar from './Components/Navbar'
 import Footer from "./Components/Footer";
+import Projects from './Components/Pages/Projects';
 
 function App() {
 
@@ -13,9 +14,10 @@ function App() {
     <Router>
         <Navbar />
         <Routes>
-        <Route path="/" element={<Landing />}/>
+        <Route path="/landing" element={<Landing />}/>
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/projects" element={<Projects />} />
         </Routes>
         <Footer />
        {/* <Landing /> */}
