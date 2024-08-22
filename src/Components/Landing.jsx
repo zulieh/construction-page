@@ -8,88 +8,85 @@ import { GrProjects } from "react-icons/gr";
 import { IoConstructSharp } from "react-icons/io5";
 import { SiConstruct3 } from "react-icons/si";
 import { LuConstruction } from "react-icons/lu";
-// import { CircleButton } from './Buttons/CircleButton';
-import Footer from './Footer';
 import PrimaryButton from './Buttons/PrimaryButton';
-
-
+import ImageGallery from './ImageGallery';
 
 const Landing = () => {
-  return (
-    <div className='Container'>
-        <div className='h-lvh'>
-        <CarouselWithContent />
-        </div>
-        <div className='px-28 pt-10 '>
-            <h1 className='text-5xl mb-10'>OUR SERVICES</h1>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-                <div>
+    const images = [
+        'images/con1.jpg',
+        'images/con2.jpg',
+        'images/con3.jpg',
+        'images/con4.jpg',
+        'images/con5.jpg',
+    ];
+
+    return (
+        <div className='container mx-auto'>
+            {/* Carousel Section */}
+            <div>
+                <CarouselWithContent />
+            </div>
+
+            {/* Services Section */}
+            <div className='px-4 md:px-28 pt-10 pb-16 animate-fly-in'>
+                <h1 className='text-3xl md:text-5xl mb-10 text-center'>OUR SERVICES</h1>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                     <ContentIcon 
-                        children= {<IoMdSettings />}
+                        children={<IoMdSettings />}
                         title="General Construction"
-                        text="We have engineers and architects suitable to work with on 
-                        the majority of items in an entire project, handling all types of projects."
+                        text="We have engineers and architects suitable to work with on the majority of items in an entire project, handling all types of projects."
                     />
-                </div>
-                <div>
                     <ContentIcon 
-                        children= {<FaProjectDiagram />}
+                        children={<FaProjectDiagram />}
                         title="Renovation projects"
-                        text="Some of the works have been weather-damaged, tarnished,or outdated for a long time
-                        We provide refurbishment, upgrading, make it like new."
+                        text="Some of the works have been weather-damaged, tarnished, or outdated for a long time. We provide refurbishment, upgrading, making it like new."
                     />
-                </div>
-                <div>
                     <ContentIcon 
-                        children= {<GrProjects />}
+                        children={<GrProjects />}
                         title="Interior design"
-                        text="Our architects will help your interiors look like an artwork. 
-                        Along with it is the interior layout, furnishings are also consulted and installed by."
+                        text="Our architects will help your interiors look like artwork. Along with it is the interior layout, and furnishings are also consulted and installed."
                     />
                 </div>
-            </div>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-4 pt-12'>
-                <div>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-4 pt-12'>
                     <ContentIcon 
-                        children= {<IoConstructSharp />}
+                        children={<IoConstructSharp />}
                         title="Consultation projects"
-                        text="Have you had trouble with the classic electrical system? 
-                        Are you looking for a custom power solution? Our electrical engineers will help you!"
+                        text="Having trouble with a classic electrical system? Looking for a custom power solution? Our electrical engineers will help you!"
                     />
-                </div>
-                <div>
                     <ContentIcon 
-                        children= {<SiConstruct3 />}
+                        children={<SiConstruct3 />}
                         title="Renovation projects"
-                        text="Our experts have many years of technical and construction experience, 
-                        and they will advise on the daily challenges that contractors to face."
+                        text="Our experts have many years of technical and construction experience, advising on daily challenges contractors face."
                     />
-                </div>
-                <div>
                     <ContentIcon 
-                        children= {<LuConstruction />}
+                        children={<LuConstruction />}
                         title="Projects Partnering"
-                        text="We co-operate with many reputable contractors, undertake many large and small projects, 
-                        covering all aspects of electricity, irrigation, bridges etc."
+                        text="We co-operate with many reputable contractors, undertaking large and small projects, covering all aspects of electricity, irrigation, bridges, etc."
                     />
                 </div>
             </div>
+
+            {/* Recent Projects Section */}
+            <div className="relative py-16 md:py-24 text-white">
+                <div className="absolute inset-0 bg-[url('/images/con8.jpg')] opacity-30"></div>
+                <div className='relative px-4 md:px-32'>
+                    <h2 className='text-center text-2xl md:text-3xl uppercase border-b-2 py-6 mb-10'>recent projects</h2>
+                    <ImageGallery images={images} />
+                </div>
+            </div>
+
+            {/* Call to Action Section */}
+            <div className="p-8 md:p-32 text-center">
+                <h2 className='text-center text-4xl md:text-5xl mt-8 md:mt-14'>YOU HAVE <span className='text-orange-600'>DREAMS</span>?</h2>
+                <h4 className='text-xl md:text-2xl my-6 md:my-10 text-gray-700'>We will</h4>
+                <h1 className='text-4xl md:text-6xl font-bold mt-5'>MAKE IT COME <span className='text-orange-600'>TRUE</span>!</h1>
+                <PrimaryButton  
+                    children="GET A CALL" 
+                    className='mt-10 hover:bg-black'
+                />
+            </div>
         </div>
-        <div className=" p-36 text-center">
-           <h2 className='text-center text-5xl mt-32'>YOU HAVE <span className='text-orange-600'>DREAMS</span>?</h2>
-           <h4 className='text-2xl my-10 text-gray-700'>We will</h4>
-           <h1 className='text-6xl font-bold mt-5'>MAKE IT COME <span className='text-orange-600'>TRUE</span>!</h1>
-           <PrimaryButton  
-           children="GET A CALL" 
-           className='hover:bg-black'
-           />
-        </div>
-        <div className='footer'>
-        <Footer />
-        </div>
-       
-    </div>
-  );
+    );
 }
 
 export default Landing;

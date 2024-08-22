@@ -1,12 +1,18 @@
-import React from 'react'
+import React from 'react';
 
-function HeroBanner({backgroundImage, text}) {
+function HeroBanner({ backgroundImage, text }) {
   return (
-    <div className=" p-48 flex text-white"
-     style={{ backgroundImage: `url(${backgroundImage})` }}>
-      <h1 className="text-6xl mt-36 text-right ">{text}</h1>
+    <div
+      className="flex text-white w-full bg-cover bg-center"
+      style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
+      <div className="w-full flex items-center justify-center bg-black/50 py-24 md:py-36 lg:py-48">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl uppercase text-center px-4">
+          {text}
+        </h1>
+      </div>
     </div>
-  )
+  );
 }
 
 export default HeroBanner;

@@ -1,0 +1,30 @@
+project
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is ahead of 'origin/main' by 9 commits.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	modified:   postcss.config.js
+#	new file:   public/images/riccardo-oliva-C5DLhUkEWfM-unsplash.jpg
+#	new file:   public/images/video1.mp4
+#	new file:   public/images/video2.mp4
+#	modified:   src/App.css
+#	modified:   src/App.jsx
+#	modified:   src/Components/Buttons/PrimaryButton.jsx
+#	modified:   src/Components/ContentIcon.jsx
+#	modified:   src/Components/Footer.jsx
+#	modified:   src/Components/HeroBanner.jsx
+#	modified:   src/Components/ImageGallery.jsx
+#	modified:   src/Components/Landing.jsx
+#	modified:   src/Components/Navbar.jsx
+#	modified:   src/Components/Pages/About.jsx
+#	modified:   src/Components/Pages/Contact.jsx
+#	modified:   src/Components/Pages/Projects.jsx
+#	modified:   src/Components/ProjectDetails.jsx
+#	modified:   src/Components/carousel.jsx
+#	modified:   tailwind.config.js
+#
