@@ -9,7 +9,7 @@ const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const Links = [
-    { name: "HOME", link: "/landing" },
+    { name: "HOME", link: "/" },
     { name: "ABOUT", link: "/about" },
     { name: "PROJECTS", link: "/projects" },
     { name: "SERVICES", link: "/services" },
