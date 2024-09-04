@@ -6,7 +6,7 @@ export function CarouselWithContent() {
     <Carousel className="translate-x-0 ease-in duration-300">
       <div className="relative h-[50vh] md:h-[70vh] lg:h-[90vh] w-full">
         <video
-          src="/images/video1.mp4"
+          src="https://cdn.pixabay.com/video/2024/07/13/220941_large.mp4"
           autoPlay
           loop
           muted
@@ -38,7 +38,7 @@ export function CarouselWithContent() {
 
       <div className="relative h-[50vh] md:h-[70vh] lg:h-[90vh] w-full">
         <video
-          src="/images/video1.mp4"
+          src="https://cdn.pixabay.com/video/2016/07/25/3992-176171691_large.mp4"
           autoPlay
           loop
           muted
@@ -70,7 +70,7 @@ export function CarouselWithContent() {
 
       <div className="relative h-[50vh] md:h-[70vh] lg:h-[90vh] w-full">
         <video
-          src="/images/video1.mp4"
+          src="https://cdn.pixabay.com/video/2020/06/23/42923-434300950_large.mp4"
           autoPlay
           loop
           muted
