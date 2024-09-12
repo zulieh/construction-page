@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CiMenuKebab } from "react-icons/ci";
 import { IoLogoChrome } from "react-icons/io";
@@ -25,12 +25,12 @@ const Navbar = () => {
   return (
     <div className="shadow-md fixed w-full top-0 left-0 bg-white z-50">
       <div className="md:flex items-center justify-between py-4 px-5 md:px-10 lg:px-20">
-        <div className="font-bold text-lg cursor-pointer flex items-center">
-          <span className="text-2xl mr-1 pt-2">
+        <Link to="/" className="font-bold text-lg cursor-pointer flex items-center" onClick={() => setOpen(false)} >
+          <span className="text-2xl mr-1 pt-2" to='/'>
             <IoLogoChrome />
           </span>
-          Multiservices Solutions
-        </div>
+          <p className='pt-2'>Multiservices Solutions</p>
+        </Link>
         <div onClick={() => setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'>
           <CiMenuKebab name={open ? 'close' : 'menu'} />
         </div>
@@ -41,6 +41,7 @@ const Navbar = () => {
             <li
               key={index}
               className="md:ml-8 text-black md:my-0 my-7 relative"
+              onClick={() => setOpen(false)}
               onMouseEnter={() => link.name === "SERVICES" && setDropdownOpen(true)}
               onMouseLeave={() => link.name === "SERVICES" && setDropdownOpen(false)}
             >

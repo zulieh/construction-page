@@ -4,8 +4,8 @@ import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
 
 const Footer = () => {
     return (
-        <div className="bg-[url('/images/con8.jpg')] bg-cover bg-center opacity-85 p-8 pt-10 text-white">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-5 md:px-10 lg:px-28">
+        <div className="bg-brown-400 bg-cover bg-center opacity- p-8 pt-10 text-white">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-5 md:px-10 lg:px-28 ">
                 <div>
                     <div className="text-white flex items-center font-bold text-lg cursor-pointer">
                         <span className="text-2xl mr-2">

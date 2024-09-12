@@ -3,7 +3,7 @@ import React from 'react';
 function HeroBanner({ backgroundImage, text }) {
   return (
     <div
-      className="flex text-white w-full bg-cover bg-center"
+      className="flex text-white h-[60vh] lg:h-[90vh] w-full bg-cover bg-center"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="w-full flex items-center justify-center bg-black/50 py-24 md:py-36 lg:py-48">

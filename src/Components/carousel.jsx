@@ -3,13 +3,20 @@ import PrimaryButton from "./Buttons/PrimaryButton";
 
 export function CarouselWithContent() {
   return (
-    <Carousel className="translate-x-0 ease-in duration-300">
-      <div className="relative h-[50vh] md:h-[70vh] lg:h-[90vh] w-full">
+    <Carousel
+      autoplay={true}
+      loop={true}
+      className="translate-x-0 ease-in duration-300"
+      prevArrow={false}
+      nextArrow={false}
+    >
+      <div className="relative h-[80vh] md:h-[70vh] lg:h-[90vh] w-full">
         <video
           src="https://cdn.pixabay.com/video/2024/07/13/220941_large.mp4"
-          autoPlay
-          loop
-          muted
+          autoPlay="autoplay"
+          playsInLine="playsinline"
+          loop="true"
+          muted="true"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/50">
@@ -36,12 +43,13 @@ export function CarouselWithContent() {
         </div>
       </div>
 
-      <div className="relative h-[50vh] md:h-[70vh] lg:h-[90vh] w-full">
+      <div className="relative h-[80vh] md:h-[70vh] lg:h-[90vh] w-full">
         <video
           src="https://cdn.pixabay.com/video/2016/07/25/3992-176171691_large.mp4"
-          autoPlay
-          loop
-          muted
+          autoPlay="autoplay"
+          playsInLine="playsinline"
+          loop="true"
+          muted="true"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/50">
@@ -68,15 +76,16 @@ export function CarouselWithContent() {
         </div>
       </div>
 
-      <div className="relative h-[50vh] md:h-[70vh] lg:h-[90vh] w-full">
+      <div className="relative h-[80vh] md:h-[70vh] lg:h-[90vh] w-full">
         <video
           src="https://cdn.pixabay.com/video/2020/06/23/42923-434300950_large.mp4"
-          autoPlay
-          loop
-          muted
+          autoPlay="autoplay"
+          playsInLine="playsinline"
+          loop="true"
+          muted="true"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 grid h-full w-full place-items-end bg-black/50">
+        <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/50">
           <div className="w-11/12 md:w-3/4 lg:w-2/4 text-center px-4">
             <Typography
               variant="h1"
