@@ -36,7 +36,7 @@ const Footer = () => {
 
                 <div className="flex flex-col md:pl-8 lg:pl-16">
                     <li className="hover:text-orange-600 mt-3 cursor-pointer">Lagos, Nigeria</li>
-                    <li className="hover:text-orange-600 mt-3 cursor-pointer">08138349856</li>
+                    <li className="hover:text-orange-600 mt-3 cursor-pointer">08138348347</li>
                     <li className="hover:text-orange-600 mt-3 cursor-pointer">tzuleiha@gmail.com</li>
                     <li className="hover:text-orange-600 mt-3 cursor-pointer">Monday-Saturday: 8am- 6pm</li>
                     <li className="hover:text-orange-600 mt-3 cursor-pointer">Saturday & Sunday: closed</li>
@@ -47,7 +47,7 @@ const Footer = () => {
                 <div onClick={pageUp} className="bg-gray-900 w-10 h-10 flex items-center justify-center rounded-full cursor-pointer" >
                     <MdOutlineKeyboardDoubleArrowUp size={24} />
                 </div>
-                <p className="text-center pt-3 border-t border-gray-500 w-full">&copy; 2024 Karion by zu</p>
+                <p className="text-center pt-3 border-t border-gray-500 w-full">&copy; 2024 Business-box by zu</p>
             </div>
         </div>
     );

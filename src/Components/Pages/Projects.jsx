@@ -16,12 +16,12 @@ function Projects() {
   ];
 
   const images = [
-    { src: 'https://images.unsplash.com/photo-1512403754473-27835f7b9984?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIzfHxhcmNoaXRlY3R1cmV8ZW58MHx8MHx8fDA%3D', category: 'BUILDING', caption: 'House Image', id: 1 },
-    { src: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29uc3RydWN0aW9ufGVufDB8fDB8fHww', category: 'FLATS', caption: 'Flat Image', id: 2 },
-    { src: 'https://images.unsplash.com/photo-1512403754473-27835f7b9984?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIzfHxhcmNoaXRlY3R1cmV8ZW58MHx8MHx8fDA%3D', category: 'TERRACE', caption: 'Terrace Image', id: 3 },
-    { src: 'https://images.unsplash.com/photo-1448301858776-07f780e9c9da?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIxfHxhcmNoaXRlY3R1cmV8ZW58MHx8MHx8fDA%3D', category: 'SERVICED', caption: 'Serviced Image', id: 4 },
-    { src: 'https://images.unsplash.com/photo-1534237710431-e2fc698436d0?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTMwfHxhcmNoaXRlY3R1cmV8ZW58MHx8MHx8fDA%3D', category: 'AIRPORT', caption: 'Airport Image', id: 5 },
-    { src: 'https://images.unsplash.com/photo-1526546334624-2afe5b01088d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTczfHxhcmNoaXRlY3R1cmV8ZW58MHx8MHx8fDA%3D', category: 'AIRPORT', caption: 'Airport Image', id: 6 },
+    { src: 'https://images.unsplash.com/photo-1512403754473-27835f7b9984?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIzfHxhcmNoaXRlY3R1cmV8ZW58MHx8MHx8fDA%3D', category: 'BUILDING', caption: 'Mansion Court', id: 1 },
+    { src: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29uc3RydWN0aW9ufGVufDB8fDB8fHww', category: 'FLATS', caption: 'Silver Court', id: 2 },
+    { src: 'https://images.unsplash.com/photo-1512403754473-27835f7b9984?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIzfHxhcmNoaXRlY3R1cmV8ZW58MHx8MHx8fDA%3D', category: 'TERRACE', caption: 'The Terrace ', id: 3 },
+    { src: 'https://images.unsplash.com/photo-1448301858776-07f780e9c9da?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIxfHxhcmNoaXRlY3R1cmV8ZW58MHx8MHx8fDA%3D', category: 'SERVICED', caption: 'Glass House', id: 4 },
+    { src: 'https://images.unsplash.com/photo-1534237710431-e2fc698436d0?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTMwfHxhcmNoaXRlY3R1cmV8ZW58MHx8MHx8fDA%3D', category: 'AIRPORT', caption: 'Faiza Court', id: 5 },
+    { src: 'https://images.unsplash.com/photo-1526546334624-2afe5b01088d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTczfHxhcmNoaXRlY3R1cmV8ZW58MHx8MHx8fDA%3D', category: 'AIRPORT', caption: 'Black Door', id: 6 },
   ];
 
   const filteredImages = selectedCategory === 'ALL'
