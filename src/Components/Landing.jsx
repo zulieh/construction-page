@@ -10,14 +10,16 @@ import { SiConstruct3 } from "react-icons/si";
 import { LuConstruction } from "react-icons/lu";
 import PrimaryButton from './Buttons/PrimaryButton';
 import ImageGallery from './ImageGallery';
+import { Link } from 'react-router-dom';
+import AnimateSection from './AnimateSection';
 
 const Landing = () => {
     const images = [
-        'images/con1.jpg',
-        'images/con2.jpg',
-        'images/con3.jpg',
-        'images/con4.jpg',
-        'images/con5.jpg',
+        'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29uc3RydWN0aW9ufGVufDB8fDB8fHww',
+        'https://images.unsplash.com/photo-1533378890784-b2a5b0a59d40?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y29uc3RydWN0aW9ufGVufDB8fDB8fHww',
+        'https://images.unsplash.com/photo-1504964670878-71b73cec0ce1?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA0fHxjb25zdHJ1Y3Rpb258ZW58MHx8MHx8fDA%3D',
+        'https://images.unsplash.com/photo-1512403754473-27835f7b9984?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIzfHxhcmNoaXRlY3R1cmV8ZW58MHx8MHx8fDA%3D',
+        'https://images.unsplash.com/photo-1448301858776-07f780e9c9da?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIxfHxhcmNoaXRlY3R1cmV8ZW58MHx8MHx8fDA%3D',
     ];
 
     return (
@@ -28,7 +30,8 @@ const Landing = () => {
             </div>
 
             {/* Services Section */}
-            <div className='px-4 md:px-28 pt-10 pb-16 animate-fly-in'>
+            <AnimateSection animationType="fade" duration={1}>
+            <div className='px-4 md:px-10 pt-10 pb-16'>
                 <h1 className='text-3xl md:text-5xl mb-10 text-center'>OUR SERVICES</h1>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                     <ContentIcon 
@@ -65,6 +68,7 @@ const Landing = () => {
                     />
                 </div>
             </div>
+            </AnimateSection>
 
             {/* Recent Projects Section */}
             <div className="relative py-16 md:py-24 text-white">
@@ -76,14 +80,16 @@ const Landing = () => {
             </div>
 
             {/* Call to Action Section */}
-            <div className="p-8 md:p-32 text-center">
+            <div className="p-4 md:p-8 text-center">
                 <h2 className='text-center text-4xl md:text-5xl mt-8 md:mt-14'>YOU HAVE <span className='text-orange-600'>DREAMS</span>?</h2>
                 <h4 className='text-xl md:text-2xl my-6 md:my-10 text-gray-700'>We will</h4>
                 <h1 className='text-4xl md:text-6xl font-bold mt-5'>MAKE IT COME <span className='text-orange-600'>TRUE</span>!</h1>
+                <Link to='/contact'>
                 <PrimaryButton  
                     children="GET A CALL" 
                     className='mt-10 hover:bg-black'
                 />
+                </Link>
             </div>
         </div>
     );

@@ -6,19 +6,21 @@ import { MdEmail } from "react-icons/md";
 import { IoTimeOutline } from "react-icons/io5";
 import PrimaryButton from '../Buttons/PrimaryButton';
 import LeafletMap from '../LeafletMap';
+import AnimateSection from '../AnimateSection';
 
 function Contact() {
   return (
     <div>
       <HeroBanner 
-        backgroundImage="/images/con3.jpg" 
+        backgroundImage="https://images.unsplash.com/photo-1531827951676-4c3cd78ed20b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTg1fHxhcmNoaXRlY3R1cmV8ZW58MHx8MHx8fDA%3D" 
         text="Contacts"
       />
+      <AnimateSection animationType="slideRight" duration={1}>
       <div className="p-6 md:p-10 lg:p-20">
-        <h1 className="text-center py-8 text-xl md:text-2xl lg:text-3xl">
+        <h1 className="text-center py-6 text-xl md:text-2xl lg:text-3xl">
           GET <span className="text-yellow-800">IN TOUCH</span>
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 pt-8">
           <div className="px-4 md:px-8 lg:px-12">
             <h3 className="text-lg md:text-xl lg:text-2xl mb-6">
               You can contact us by call, message, or visit us from Monday to Friday, 8 am - 6 pm.
@@ -73,6 +75,7 @@ function Contact() {
           </div>
         </div>
       </div>
+      </AnimateSection>
       <div className="w-full">
         <LeafletMap />
       </div>

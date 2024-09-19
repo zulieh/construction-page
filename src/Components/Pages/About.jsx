@@ -1,14 +1,17 @@
 import React from 'react';
 import { MdOutlineMinimize } from "react-icons/md";
 import HeroBanner from '../HeroBanner';
+import AnimateSection from '../AnimateSection';
+
 
 function About() {
   return (
     <>
       <HeroBanner 
-        backgroundImage="/images/con1.jpg"
-        text="About Lev-kal"
+        backgroundImage="https://images.unsplash.com/photo-1512403754473-27835f7b9984?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIzfHxhcmNoaXRlY3R1cmV8ZW58MHx8MHx8fDA%3D"
+        text="About Business-box"
       />
+       <AnimateSection animationType="scale" duration={1}>
       <div className="mt-8 md:mt-12 lg:mt-16 px-6 md:px-16 lg:px-40 py-8 md:py-12 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
           <div>
@@ -50,6 +53,8 @@ function About() {
           </div>
         </div>
       </div>
+      </AnimateSection>
+      <AnimateSection animationType="slideUp" duration={1}>
       <div className="px-6 md:px-16 lg:px-32 text-center">
         <h1 className="text-xl md:text-2xl lg:text-3xl py-6 md:py-10 lg:py-14">
           <span className="text-yellow-800">OUR</span> VISION
@@ -81,6 +86,7 @@ function About() {
           ))}
         </div>
       </div>
+      </AnimateSection>
     </>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
-const ImageGallery = ({ images }) => {
+const ImageGallery = ({ images, onImageClick}) => {
   const scrollContainerRef = useRef(null);
 
   const scrollLeft = () => {
@@ -33,6 +33,7 @@ const ImageGallery = ({ images }) => {
             src={image}
             alt={`gallery-${index}`}
             className="w-48 md:w-80 h-36 md:h-52 object-cover rounded-lg flex-shrink-0"
+            onClick={() => onImageClick(image)}
           />
         ))}
       </div>

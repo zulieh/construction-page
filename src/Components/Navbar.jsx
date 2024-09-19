@@ -5,11 +5,24 @@ import { IoLogoChrome } from "react-icons/io";
 import { AiOutlineDown } from "react-icons/ai";
 
 const Navbar = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
   const [open, setOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
+  // Function to track scroll position
+  const handleScroll = () => {
+    setScrollPosition(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const Links = [
-    { name: "HOME", link: "/" },
+    { name: "HOME", link: "/"},
     { name: "ABOUT", link: "/about" },
     { name: "PROJECTS", link: "/projects" },
     { name: "SERVICES", link: "/services" },
@@ -23,24 +36,24 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="shadow-md fixed w-full top-0 left-0 bg-white z-50">
+    <div className={`fixed w-full top-0 left-0 z-50 transition-colors duration-300 ${scrollPosition > 50 ? 'bg-white shadow-md' : 'bg-transparent'}`}>
       <div className="md:flex items-center justify-between py-4 px-5 md:px-10 lg:px-20">
         <Link to="/" className="font-bold text-lg cursor-pointer flex items-center" onClick={() => setOpen(false)} >
-          <span className="text-2xl mr-1 pt-2" to='/'>
+          <span className="text-2xl mr-1 pt-2">
             <IoLogoChrome />
           </span>
-          <p className='pt-2'>Multiservices Solutions</p>
+          <p className={`pt-2 ${scrollPosition > 50 ? 'text-black' : 'text-white'}`}>Multiservices Solutions</p>
         </Link>
         <div onClick={() => setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'>
           <CiMenuKebab name={open ? 'close' : 'menu'} />
         </div>
-        <ul className={` bg-white md:flex md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[-1]
+        <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[-1]
         left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 
-        ease-in ${open ? 'top-20' : 'top-[-490px]'}`}>
+        ease-in ${open ? 'top-20 bg-white' : 'top-[-490px]'}`}>
           {Links.map((link, index) => (
             <li
               key={index}
-              className="md:ml-8 text-black md:my-0 my-7 relative"
+              className={`md:ml-8 ${scrollPosition > 50 ? 'text-black' : 'text-white'} md:my-0 my-7 relative`}
               onClick={() => setOpen(false)}
               onMouseEnter={() => link.name === "SERVICES" && setDropdownOpen(true)}
               onMouseLeave={() => link.name === "SERVICES" && setDropdownOpen(false)}
@@ -52,7 +65,7 @@ const Navbar = () => {
                     <AiOutlineDown className="ml-2" />
                   </div>
                   {dropdownOpen && (
-                    <ul className="absolute left-0 mt-2 bg-white shadow-lg rounded-md w-40">
+                    <ul className="absolute left-0 mt-2 bg-grey shadow-lg rounded-md w-40">
                       {serviceLinks.map((service, serviceIndex) => (
                         <li key={serviceIndex} className="px-4 py-2 hover:bg-gray-200">
                           <Link to={service.link} className="hover:text-orange-400 duration-500">

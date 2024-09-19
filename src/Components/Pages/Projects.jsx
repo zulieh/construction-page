@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import HeroBanner from '../HeroBanner';
 import { Link } from 'react-router-dom';
+import AnimateSection from '../AnimateSection';
 
 function Projects() {
   const [selectedCategory, setSelectedCategory] = useState('ALL');
@@ -15,12 +16,12 @@ function Projects() {
   ];
 
   const images = [
-    { src: 'images/con1.jpg', category: 'BUILDING', caption: 'House Image', id: 1 },
-    { src: 'images/con3.jpg', category: 'FLATS', caption: 'Flat Image', id: 2 },
-    { src: 'images/con4.jpg', category: 'TERRACE', caption: 'Terrace Image', id: 3 },
-    { src: 'images/con5.jpg', category: 'SERVICED', caption: 'Serviced Image', id: 4 },
-    { src: 'images/con6.jpg', category: 'AIRPORT', caption: 'Airport Image', id: 5 },
-    { src: 'images/con7.jpg', category: 'AIRPORT', caption: 'Airport Image', id: 6 },
+    { src: 'https://images.unsplash.com/photo-1512403754473-27835f7b9984?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIzfHxhcmNoaXRlY3R1cmV8ZW58MHx8MHx8fDA%3D', category: 'BUILDING', caption: 'House Image', id: 1 },
+    { src: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29uc3RydWN0aW9ufGVufDB8fDB8fHww', category: 'FLATS', caption: 'Flat Image', id: 2 },
+    { src: 'https://images.unsplash.com/photo-1512403754473-27835f7b9984?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIzfHxhcmNoaXRlY3R1cmV8ZW58MHx8MHx8fDA%3D', category: 'TERRACE', caption: 'Terrace Image', id: 3 },
+    { src: 'https://images.unsplash.com/photo-1448301858776-07f780e9c9da?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIxfHxhcmNoaXRlY3R1cmV8ZW58MHx8MHx8fDA%3D', category: 'SERVICED', caption: 'Serviced Image', id: 4 },
+    { src: 'https://images.unsplash.com/photo-1534237710431-e2fc698436d0?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTMwfHxhcmNoaXRlY3R1cmV8ZW58MHx8MHx8fDA%3D', category: 'AIRPORT', caption: 'Airport Image', id: 5 },
+    { src: 'https://images.unsplash.com/photo-1526546334624-2afe5b01088d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTczfHxhcmNoaXRlY3R1cmV8ZW58MHx8MHx8fDA%3D', category: 'AIRPORT', caption: 'Airport Image', id: 6 },
   ];
 
   const filteredImages = selectedCategory === 'ALL'
@@ -30,9 +31,10 @@ function Projects() {
   return (
     <div>
       <HeroBanner 
-        backgroundImage="/images/con6.jpg"
+        backgroundImage="https://images.unsplash.com/photo-1526546334624-2afe5b01088d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTczfHxhcmNoaXRlY3R1cmV8ZW58MHx8MHx8fDA%3D"
         text="Projects"
       />
+       <AnimateSection animationType="slideLeft" duration={1}>
       <div className="p-4 md:p-8 lg:p-12">
         <ul className="flex flex-wrap justify-center gap-4 md:gap-8 mb-8">
           {Lists.map((link, index) => (
@@ -59,7 +61,9 @@ function Projects() {
           ))}
         </div>
       </div>
+      </AnimateSection>
     </div>
+   
   );
 }
 
